@@ -1,3 +1,3 @@
 # CFS-StaticProject
 
-This Project is static project for CFS training
+This Project is static project for CFS training and assessment
