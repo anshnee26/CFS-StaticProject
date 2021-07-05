@@ -1,0 +1,167 @@
+<html> 
+  <head>
+    <title>Testing</title> 
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui-1.12.1/jquery-ui.js">
+    <link rel="stylesheet" href="jqueryui/jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui-1.12.1/jquery-ui.theme.css">
+
+  </head>
+ 
+<body  background="https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> 
+
+    <!-- <p>Hello World  <p>  -->
+ <img src="logo.png" width="150"/>
+ <br>
+ <div id="login">
+  <h1>Login</h1>
+</div>
+
+  <div  class="form">
+    <form id= "form1" onsubmit=" return validate()" action="welcome.html">
+      
+      <label><b>Enter Username</b></label>
+      <input id="user" type="text" placeholder="Username" >
+      <br><br>
+      <label><b>Enter Password</b></label>
+       <input id="pwd" type="password" placeholder="Password">
+      <br><br> 
+      
+      <input id="dob" type="text" placeholder="Enter your DOB">
+      <br><br> 
+      <label><b>Enter your City</b></label>
+      <input id="city" type="text" placeholder="Enter your City">
+      <br><br> 
+ 
+      <input  type="submit"  value="Submit" >
+
+      <br>
+
+  
+    </form>
+ </div>
+ 
+ 
+
+<div class="animate">
+
+ <h2>Welcome to the world of happiness !!</h2>
+
+ </div>
+
+ <div id="panels">
+
+    <h3>About Creator</h3>
+    <p><i>Hi, I am Anshu, Creator of this page. Primary objective is to Learn about HTML, JS, CSS
+      Staring with HTML and CSS first followed by JS and AngulaJS and AJAX
+    </i></p>
+    <h3>Contacts</h3>
+    <p><i>You can contact me at "anshu.ranjan2607@gmail.com"</i></p>
+ </div>
+
+
+
+</body>
+
+<script src="JS/jquery.js" type="text/javascript"></script>
+
+<script src="jqueryui/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+
+  $(document).ready(function(){
+
+    $("#dob").datepicker({
+      
+      changeYear:true,
+      changeMonth:true,
+      showOtherMonths:true,
+      
+  
+     });
+
+     $("#panels").accordion({
+
+      collapsible:true,
+      heightStyle: true,
+      icons:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
+});
+
+  });
+</script>
+
+<script >
+   
+  
+</script>
+
+<script>
+ 
+ 
+
+</script>
+
+<script>
+
+  var mycity=["Pune","Nagpur","Mumbai","Munger","Bangalore","Ahemdabad",
+
+     "Chennai","New Delhi","Darjeeling","Faridabad","Gwalior",
+     "Hyderabad","Indore","Jaipur","Kanpur","Lucknow","Patna",
+     "Raipur","Sultanpur","Tiruvananthapuram","Vellore","Yashwantpur"
+];
+
+    $("#city").autocomplete({
+
+     source: mycity
+    },{
+
+      autoFocus: true,
+
+    });
+
+
+</script>
+
+<script>
+
+  $("#form1").draggable({
+
+    cursor: "grabbing",
+    containment:"document"
+
+  })
+</script>
+
+
+<script >
+  function validate(){
+   // var data=document.getElementsByTagName("p");
+
+   // data[0].style.fontSize =25;
+
+   //document.write(data[0]);
+   
+
+   var username= document.getElementById("user");
+   var password= document.getElementById("pwd");
+
+   
+   
+   if(username.value.trim() =="" || password.value.trim() ==""){
+
+       alert("Fields can't be blank");
+       return false;
+   }
+   else{
+       
+       return true;
+   
+   }
+
+
+  }
+</script>
+
+
+
+</html>
